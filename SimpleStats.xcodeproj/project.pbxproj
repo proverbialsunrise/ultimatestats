@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37CF7600185B752800E69ADB /* USSGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF75FF185B752800E69ADB /* USSGameListViewController.m */; };
+		37CF7603185B8F6200E69ADB /* USSGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF7602185B8F6200E69ADB /* USSGameCell.m */; };
+		37CF7605185B905800E69ADB /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CF7604185B905800E69ADB /* GameTableViewCell.xib */; };
+		37CF761A185CEAB300E69ADB /* USSGameDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF7619185CEAB300E69ADB /* USSGameDetailsViewController.m */; };
+		37D93F3418412C100020AE83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D93F3318412C100020AE83 /* Foundation.framework */; };
+		37D93F3618412C100020AE83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D93F3518412C100020AE83 /* CoreGraphics.framework */; };
+		37D93F3818412C100020AE83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D93F3718412C100020AE83 /* UIKit.framework */; };
+		37D93F3E18412C100020AE83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D93F3C18412C100020AE83 /* InfoPlist.strings */; };
+		37D93F4018412C100020AE83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F3F18412C100020AE83 /* main.m */; };
+		37D93F4418412C100020AE83 /* USSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F4318412C100020AE83 /* USSAppDelegate.m */; };
+		37D93F4618412C100020AE83 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D93F4518412C100020AE83 /* Images.xcassets */; };
+		37D93F4D18412C100020AE83 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D93F4C18412C100020AE83 /* XCTest.framework */; };
+		37D93F4E18412C100020AE83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D93F3318412C100020AE83 /* Foundation.framework */; };
+		37D93F4F18412C100020AE83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D93F3718412C100020AE83 /* UIKit.framework */; };
+		37D93F5718412C100020AE83 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37D93F5518412C100020AE83 /* InfoPlist.strings */; };
+		37D93F5918412C100020AE83 /* SimpleStatsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F5818412C100020AE83 /* SimpleStatsTests.m */; };
+		37D93F6518412CDE0020AE83 /* USSTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F6418412CDE0020AE83 /* USSTeam.m */; };
+		37D93F6B18412D570020AE83 /* USSGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F6A18412D570020AE83 /* USSGame.m */; };
+		37D93F6E18412D760020AE83 /* USSPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F6D18412D760020AE83 /* USSPlayer.m */; };
+		37D93F7118412DA20020AE83 /* USSPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F7018412DA20020AE83 /* USSPoint.m */; };
+		37D93F74184169BA0020AE83 /* USSPossession.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F73184169BA0020AE83 /* USSPossession.m */; };
+		37D93F77184180270020AE83 /* USSRosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F76184180270020AE83 /* USSRosterViewController.m */; };
+		37D93F7A1841A7D10020AE83 /* RosterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D93F791841A7D10020AE83 /* RosterTableViewCell.xib */; };
+		37D93F7D1841B30B0020AE83 /* USSRosterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F7C1841B30B0020AE83 /* USSRosterCell.m */; };
+		37D93F85185258EE0020AE83 /* USSPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F84185258EE0020AE83 /* USSPlayerViewController.m */; };
+		37D93F8818525FCF0020AE83 /* USSEditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F8718525FCF0020AE83 /* USSEditableTableViewCell.m */; };
+		CC329FCF95B34C5DBD513937 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE75DFBD82B44E5ABB5EE977 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37D93F5018412C100020AE83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D93F2818412C100020AE83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D93F2F18412C100020AE83;
+			remoteInfo = SimpleStats;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37CF75FE185B752800E69ADB /* USSGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameListViewController.h; path = Interface/USSGameListViewController.h; sourceTree = "<group>"; };
+		37CF75FF185B752800E69ADB /* USSGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGameListViewController.m; path = Interface/USSGameListViewController.m; sourceTree = "<group>"; };
+		37CF7601185B8F6200E69ADB /* USSGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameCell.h; path = Interface/USSGameCell.h; sourceTree = "<group>"; };
+		37CF7602185B8F6200E69ADB /* USSGameCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGameCell.m; path = Interface/USSGameCell.m; sourceTree = "<group>"; };
+		37CF7604185B905800E69ADB /* GameTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameTableViewCell.xib; path = Interface/GameTableViewCell.xib; sourceTree = "<group>"; };
+		37CF7618185CEAB300E69ADB /* USSGameDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameDetailsViewController.h; path = Interface/USSGameDetailsViewController.h; sourceTree = "<group>"; };
+		37CF7619185CEAB300E69ADB /* USSGameDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGameDetailsViewController.m; path = Interface/USSGameDetailsViewController.m; sourceTree = "<group>"; };
+		37D93F3018412C100020AE83 /* SimpleStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D93F3318412C100020AE83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		37D93F3518412C100020AE83 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		37D93F3718412C100020AE83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		37D93F3B18412C100020AE83 /* SimpleStats-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleStats-Info.plist"; sourceTree = "<group>"; };
+		37D93F3D18412C100020AE83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37D93F3F18412C100020AE83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37D93F4118412C100020AE83 /* SimpleStats-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleStats-Prefix.pch"; sourceTree = "<group>"; };
+		37D93F4218412C100020AE83 /* USSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = USSAppDelegate.h; sourceTree = "<group>"; };
+		37D93F4318412C100020AE83 /* USSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = USSAppDelegate.m; sourceTree = "<group>"; };
+		37D93F4518412C100020AE83 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37D93F4B18412C100020AE83 /* SimpleStatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleStatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D93F4C18412C100020AE83 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		37D93F5418412C100020AE83 /* SimpleStatsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleStatsTests-Info.plist"; sourceTree = "<group>"; };
+		37D93F5618412C100020AE83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37D93F5818412C100020AE83 /* SimpleStatsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleStatsTests.m; sourceTree = "<group>"; };
+		37D93F6318412CDE0020AE83 /* USSTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSTeam.h; path = DataModel/USSTeam.h; sourceTree = "<group>"; };
+		37D93F6418412CDE0020AE83 /* USSTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSTeam.m; path = DataModel/USSTeam.m; sourceTree = "<group>"; };
+		37D93F6918412D570020AE83 /* USSGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGame.h; path = DataModel/USSGame.h; sourceTree = "<group>"; };
+		37D93F6A18412D570020AE83 /* USSGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGame.m; path = DataModel/USSGame.m; sourceTree = "<group>"; };
+		37D93F6C18412D760020AE83 /* USSPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSPlayer.h; path = DataModel/USSPlayer.h; sourceTree = "<group>"; };
+		37D93F6D18412D760020AE83 /* USSPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSPlayer.m; path = DataModel/USSPlayer.m; sourceTree = "<group>"; };
+		37D93F6F18412DA20020AE83 /* USSPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSPoint.h; path = DataModel/USSPoint.h; sourceTree = "<group>"; };
+		37D93F7018412DA20020AE83 /* USSPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSPoint.m; path = DataModel/USSPoint.m; sourceTree = "<group>"; };
+		37D93F72184169BA0020AE83 /* USSPossession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSPossession.h; path = DataModel/USSPossession.h; sourceTree = "<group>"; };
+		37D93F73184169BA0020AE83 /* USSPossession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSPossession.m; path = DataModel/USSPossession.m; sourceTree = "<group>"; };
+		37D93F75184180270020AE83 /* USSRosterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSRosterViewController.h; path = Interface/USSRosterViewController.h; sourceTree = "<group>"; };
+		37D93F76184180270020AE83 /* USSRosterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSRosterViewController.m; path = Interface/USSRosterViewController.m; sourceTree = "<group>"; };
+		37D93F791841A7D10020AE83 /* RosterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RosterTableViewCell.xib; path = Interface/RosterTableViewCell.xib; sourceTree = "<group>"; };
+		37D93F7B1841B30B0020AE83 /* USSRosterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSRosterCell.h; path = Interface/USSRosterCell.h; sourceTree = "<group>"; };
+		37D93F7C1841B30B0020AE83 /* USSRosterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSRosterCell.m; path = Interface/USSRosterCell.m; sourceTree = "<group>"; };
+		37D93F83185258EE0020AE83 /* USSPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSPlayerViewController.h; path = Interface/USSPlayerViewController.h; sourceTree = "<group>"; };
+		37D93F84185258EE0020AE83 /* USSPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSPlayerViewController.m; path = Interface/USSPlayerViewController.m; sourceTree = "<group>"; };
+		37D93F8618525FCF0020AE83 /* USSEditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSEditableTableViewCell.h; path = Interface/USSEditableTableViewCell.h; sourceTree = "<group>"; };
+		37D93F8718525FCF0020AE83 /* USSEditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSEditableTableViewCell.m; path = Interface/USSEditableTableViewCell.m; sourceTree = "<group>"; };
+		E4FD0FAEC6714F0BB8F97877 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		EE75DFBD82B44E5ABB5EE977 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37D93F2D18412C100020AE83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D93F3618412C100020AE83 /* CoreGraphics.framework in Frameworks */,
+				37D93F3818412C100020AE83 /* UIKit.framework in Frameworks */,
+				37D93F3418412C100020AE83 /* Foundation.framework in Frameworks */,
+				CC329FCF95B34C5DBD513937 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D93F4818412C100020AE83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D93F4D18412C100020AE83 /* XCTest.framework in Frameworks */,
+				37D93F4F18412C100020AE83 /* UIKit.framework in Frameworks */,
+				37D93F4E18412C100020AE83 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37CF75FC185B74D900E69ADB /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				37D93F75184180270020AE83 /* USSRosterViewController.h */,
+				37D93F76184180270020AE83 /* USSRosterViewController.m */,
+				37D93F791841A7D10020AE83 /* RosterTableViewCell.xib */,
+				37D93F7B1841B30B0020AE83 /* USSRosterCell.h */,
+				37D93F7C1841B30B0020AE83 /* USSRosterCell.m */,
+				37D93F83185258EE0020AE83 /* USSPlayerViewController.h */,
+				37D93F84185258EE0020AE83 /* USSPlayerViewController.m */,
+			);
+			name = Roster;
+			sourceTree = "<group>";
+		};
+		37CF75FD185B74ED00E69ADB /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				37CF7604185B905800E69ADB /* GameTableViewCell.xib */,
+				37CF75FE185B752800E69ADB /* USSGameListViewController.h */,
+				37CF75FF185B752800E69ADB /* USSGameListViewController.m */,
+				37CF7601185B8F6200E69ADB /* USSGameCell.h */,
+				37CF7602185B8F6200E69ADB /* USSGameCell.m */,
+				37CF7618185CEAB300E69ADB /* USSGameDetailsViewController.h */,
+				37CF7619185CEAB300E69ADB /* USSGameDetailsViewController.m */,
+			);
+			name = GameList;
+			sourceTree = "<group>";
+		};
+		37D93F2718412C100020AE83 = {
+			isa = PBXGroup;
+			children = (
+				37D93F3918412C100020AE83 /* SimpleStats */,
+				37D93F5218412C100020AE83 /* SimpleStatsTests */,
+				37D93F3218412C100020AE83 /* Frameworks */,
+				37D93F3118412C100020AE83 /* Products */,
+				E4FD0FAEC6714F0BB8F97877 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		37D93F3118412C100020AE83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37D93F3018412C100020AE83 /* SimpleStats.app */,
+				37D93F4B18412C100020AE83 /* SimpleStatsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37D93F3218412C100020AE83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37D93F3318412C100020AE83 /* Foundation.framework */,
+				37D93F3518412C100020AE83 /* CoreGraphics.framework */,
+				37D93F3718412C100020AE83 /* UIKit.framework */,
+				37D93F4C18412C100020AE83 /* XCTest.framework */,
+				EE75DFBD82B44E5ABB5EE977 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37D93F3918412C100020AE83 /* SimpleStats */ = {
+			isa = PBXGroup;
+			children = (
+				37D93F781841803C0020AE83 /* Interface */,
+				37D93F6218412CBC0020AE83 /* DataModel */,
+				37D93F4218412C100020AE83 /* USSAppDelegate.h */,
+				37D93F4318412C100020AE83 /* USSAppDelegate.m */,
+				37D93F4518412C100020AE83 /* Images.xcassets */,
+				37D93F3A18412C100020AE83 /* Supporting Files */,
+			);
+			path = SimpleStats;
+			sourceTree = "<group>";
+		};
+		37D93F3A18412C100020AE83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D93F3B18412C100020AE83 /* SimpleStats-Info.plist */,
+				37D93F3C18412C100020AE83 /* InfoPlist.strings */,
+				37D93F3F18412C100020AE83 /* main.m */,
+				37D93F4118412C100020AE83 /* SimpleStats-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37D93F5218412C100020AE83 /* SimpleStatsTests */ = {
+			isa = PBXGroup;
+			children = (
+				37D93F5818412C100020AE83 /* SimpleStatsTests.m */,
+				37D93F5318412C100020AE83 /* Supporting Files */,
+			);
+			path = SimpleStatsTests;
+			sourceTree = "<group>";
+		};
+		37D93F5318412C100020AE83 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D93F5418412C100020AE83 /* SimpleStatsTests-Info.plist */,
+				37D93F5518412C100020AE83 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37D93F6218412CBC0020AE83 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				37D93F6C18412D760020AE83 /* USSPlayer.h */,
+				37D93F6D18412D760020AE83 /* USSPlayer.m */,
+				37D93F6318412CDE0020AE83 /* USSTeam.h */,
+				37D93F6418412CDE0020AE83 /* USSTeam.m */,
+				37D93F6918412D570020AE83 /* USSGame.h */,
+				37D93F6A18412D570020AE83 /* USSGame.m */,
+				37D93F6F18412DA20020AE83 /* USSPoint.h */,
+				37D93F7018412DA20020AE83 /* USSPoint.m */,
+				37D93F72184169BA0020AE83 /* USSPossession.h */,
+				37D93F73184169BA0020AE83 /* USSPossession.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		37D93F781841803C0020AE83 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				37CF75FD185B74ED00E69ADB /* GameList */,
+				37CF75FC185B74D900E69ADB /* Roster */,
+				37D93F8618525FCF0020AE83 /* USSEditableTableViewCell.h */,
+				37D93F8718525FCF0020AE83 /* USSEditableTableViewCell.m */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37D93F2F18412C100020AE83 /* SimpleStats */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D93F5C18412C100020AE83 /* Build configuration list for PBXNativeTarget "SimpleStats" */;
+			buildPhases = (
+				A3529D601DED4F69AF17F1A9 /* Check Pods Manifest.lock */,
+				37D93F2C18412C100020AE83 /* Sources */,
+				37D93F2D18412C100020AE83 /* Frameworks */,
+				37D93F2E18412C100020AE83 /* Resources */,
+				33F08D4916394DA88193028E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleStats;
+			productName = SimpleStats;
+			productReference = 37D93F3018412C100020AE83 /* SimpleStats.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37D93F4A18412C100020AE83 /* SimpleStatsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D93F5F18412C100020AE83 /* Build configuration list for PBXNativeTarget "SimpleStatsTests" */;
+			buildPhases = (
+				37D93F4718412C100020AE83 /* Sources */,
+				37D93F4818412C100020AE83 /* Frameworks */,
+				37D93F4918412C100020AE83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D93F5118412C100020AE83 /* PBXTargetDependency */,
+			);
+			name = SimpleStatsTests;
+			productName = SimpleStatsTests;
+			productReference = 37D93F4B18412C100020AE83 /* SimpleStatsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37D93F2818412C100020AE83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = USS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Daniel Johnson";
+				TargetAttributes = {
+					37D93F4A18412C100020AE83 = {
+						TestTargetID = 37D93F2F18412C100020AE83;
+					};
+				};
+			};
+			buildConfigurationList = 37D93F2B18412C100020AE83 /* Build configuration list for PBXProject "SimpleStats" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 37D93F2718412C100020AE83;
+			productRefGroup = 37D93F3118412C100020AE83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37D93F2F18412C100020AE83 /* SimpleStats */,
+				37D93F4A18412C100020AE83 /* SimpleStatsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37D93F2E18412C100020AE83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D93F3E18412C100020AE83 /* InfoPlist.strings in Resources */,
+				37D93F7A1841A7D10020AE83 /* RosterTableViewCell.xib in Resources */,
+				37D93F4618412C100020AE83 /* Images.xcassets in Resources */,
+				37CF7605185B905800E69ADB /* GameTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D93F4918412C100020AE83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D93F5718412C100020AE83 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33F08D4916394DA88193028E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3529D601DED4F69AF17F1A9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37D93F2C18412C100020AE83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D93F7118412DA20020AE83 /* USSPoint.m in Sources */,
+				37D93F4418412C100020AE83 /* USSAppDelegate.m in Sources */,
+				37CF7600185B752800E69ADB /* USSGameListViewController.m in Sources */,
+				37D93F8818525FCF0020AE83 /* USSEditableTableViewCell.m in Sources */,
+				37D93F6B18412D570020AE83 /* USSGame.m in Sources */,
+				37D93F4018412C100020AE83 /* main.m in Sources */,
+				37D93F74184169BA0020AE83 /* USSPossession.m in Sources */,
+				37D93F85185258EE0020AE83 /* USSPlayerViewController.m in Sources */,
+				37D93F77184180270020AE83 /* USSRosterViewController.m in Sources */,
+				37D93F7D1841B30B0020AE83 /* USSRosterCell.m in Sources */,
+				37CF7603185B8F6200E69ADB /* USSGameCell.m in Sources */,
+				37D93F6E18412D760020AE83 /* USSPlayer.m in Sources */,
+				37D93F6518412CDE0020AE83 /* USSTeam.m in Sources */,
+				37CF761A185CEAB300E69ADB /* USSGameDetailsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D93F4718412C100020AE83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D93F5918412C100020AE83 /* SimpleStatsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37D93F5118412C100020AE83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37D93F2F18412C100020AE83 /* SimpleStats */;
+			targetProxy = 37D93F5018412C100020AE83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37D93F3C18412C100020AE83 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D93F3D18412C100020AE83 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		37D93F5518412C100020AE83 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D93F5618412C100020AE83 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37D93F5A18412C100020AE83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		37D93F5B18412C100020AE83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37D93F5D18412C100020AE83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FD0FAEC6714F0BB8F97877 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleStats/SimpleStats-Prefix.pch";
+				INFOPLIST_FILE = "SimpleStats/SimpleStats-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		37D93F5E18412C100020AE83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FD0FAEC6714F0BB8F97877 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleStats/SimpleStats-Prefix.pch";
+				INFOPLIST_FILE = "SimpleStats/SimpleStats-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		37D93F6018412C100020AE83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleStats.app/SimpleStats";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleStats/SimpleStats-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SimpleStatsTests/SimpleStatsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		37D93F6118412C100020AE83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleStats.app/SimpleStats";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleStats/SimpleStats-Prefix.pch";
+				INFOPLIST_FILE = "SimpleStatsTests/SimpleStatsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37D93F2B18412C100020AE83 /* Build configuration list for PBXProject "SimpleStats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D93F5A18412C100020AE83 /* Debug */,
+				37D93F5B18412C100020AE83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D93F5C18412C100020AE83 /* Build configuration list for PBXNativeTarget "SimpleStats" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D93F5D18412C100020AE83 /* Debug */,
+				37D93F5E18412C100020AE83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D93F5F18412C100020AE83 /* Build configuration list for PBXNativeTarget "SimpleStatsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D93F6018412C100020AE83 /* Debug */,
+				37D93F6118412C100020AE83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37D93F2818412C100020AE83 /* Project object */;
+}
