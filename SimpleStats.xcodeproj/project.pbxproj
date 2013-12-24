@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3701439C18635F4D008FBD8A /* USSTeamScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3701439B18635F4D008FBD8A /* USSTeamScoreView.m */; };
+		370143A218636BFF008FBD8A /* USSGameTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370143A018636BFF008FBD8A /* USSGameTrackingViewController.m */; };
+		370143A318636BFF008FBD8A /* USSGameTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370143A118636BFF008FBD8A /* USSGameTrackingViewController.xib */; };
+		370143A518636C34008FBD8A /* USSTeamScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370143A418636C34008FBD8A /* USSTeamScoreView.xib */; };
 		37CF7600185B752800E69ADB /* USSGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF75FF185B752800E69ADB /* USSGameListViewController.m */; };
 		37CF7603185B8F6200E69ADB /* USSGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF7602185B8F6200E69ADB /* USSGameCell.m */; };
 		37CF7605185B905800E69ADB /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CF7604185B905800E69ADB /* GameTableViewCell.xib */; };
@@ -47,6 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3701439A18635F4D008FBD8A /* USSTeamScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSTeamScoreView.h; path = Interface/USSTeamScoreView.h; sourceTree = "<group>"; };
+		3701439B18635F4D008FBD8A /* USSTeamScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSTeamScoreView.m; path = Interface/USSTeamScoreView.m; sourceTree = "<group>"; };
+		3701439F18636BFF008FBD8A /* USSGameTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameTrackingViewController.h; path = Interface/USSGameTrackingViewController.h; sourceTree = "<group>"; };
+		370143A018636BFF008FBD8A /* USSGameTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGameTrackingViewController.m; path = Interface/USSGameTrackingViewController.m; sourceTree = "<group>"; };
+		370143A118636BFF008FBD8A /* USSGameTrackingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = USSGameTrackingViewController.xib; path = Interface/USSGameTrackingViewController.xib; sourceTree = "<group>"; };
+		370143A418636C34008FBD8A /* USSTeamScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = USSTeamScoreView.xib; path = Interface/USSTeamScoreView.xib; sourceTree = "<group>"; };
 		37CF75FE185B752800E69ADB /* USSGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameListViewController.h; path = Interface/USSGameListViewController.h; sourceTree = "<group>"; };
 		37CF75FF185B752800E69ADB /* USSGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGameListViewController.m; path = Interface/USSGameListViewController.m; sourceTree = "<group>"; };
 		37CF7601185B8F6200E69ADB /* USSGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameCell.h; path = Interface/USSGameCell.h; sourceTree = "<group>"; };
@@ -118,6 +128,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3701439918635CA3008FBD8A /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				370143A418636C34008FBD8A /* USSTeamScoreView.xib */,
+				3701439A18635F4D008FBD8A /* USSTeamScoreView.h */,
+				3701439B18635F4D008FBD8A /* USSTeamScoreView.m */,
+				3701439F18636BFF008FBD8A /* USSGameTrackingViewController.h */,
+				370143A018636BFF008FBD8A /* USSGameTrackingViewController.m */,
+				370143A118636BFF008FBD8A /* USSGameTrackingViewController.xib */,
+			);
+			name = Tracking;
+			sourceTree = "<group>";
+		};
 		37CF75FC185B74D900E69ADB /* Roster */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +263,7 @@
 		37D93F781841803C0020AE83 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				3701439918635CA3008FBD8A /* Tracking */,
 				37CF75FD185B74ED00E69ADB /* GameList */,
 				37CF75FC185B74D900E69ADB /* Roster */,
 				37D93F8618525FCF0020AE83 /* USSEditableTableViewCell.h */,
@@ -328,7 +352,9 @@
 			files = (
 				37D93F3E18412C100020AE83 /* InfoPlist.strings in Resources */,
 				37D93F7A1841A7D10020AE83 /* RosterTableViewCell.xib in Resources */,
+				370143A518636C34008FBD8A /* USSTeamScoreView.xib in Resources */,
 				37D93F4618412C100020AE83 /* Images.xcassets in Resources */,
+				370143A318636BFF008FBD8A /* USSGameTrackingViewController.xib in Resources */,
 				37CF7605185B905800E69ADB /* GameTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D93F7118412DA20020AE83 /* USSPoint.m in Sources */,
+				370143A218636BFF008FBD8A /* USSGameTrackingViewController.m in Sources */,
 				37D93F4418412C100020AE83 /* USSAppDelegate.m in Sources */,
 				37CF7600185B752800E69ADB /* USSGameListViewController.m in Sources */,
 				37D93F8818525FCF0020AE83 /* USSEditableTableViewCell.m in Sources */,
@@ -394,6 +421,7 @@
 				37CF7603185B8F6200E69ADB /* USSGameCell.m in Sources */,
 				37D93F6E18412D760020AE83 /* USSPlayer.m in Sources */,
 				37D93F6518412CDE0020AE83 /* USSTeam.m in Sources */,
+				3701439C18635F4D008FBD8A /* USSTeamScoreView.m in Sources */,
 				37CF761A185CEAB300E69ADB /* USSGameDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

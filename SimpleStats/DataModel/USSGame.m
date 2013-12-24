@@ -7,7 +7,16 @@
 //
 
 #import "USSGame.h"
+#import "USSTeam.h"
 
 @implementation USSGame
+
+- (USSTeam *) team {
+    USSTeam *_team = [USSTeam instanceWithPrimaryKey:@(self.teamID)];
+    return _team;
+}
+
+
+
 
 @end

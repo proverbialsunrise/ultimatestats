@@ -8,6 +8,7 @@
 
 #import "USSGameListViewController.h"
 #import "USSGameDetailsViewController.h"
+#import "USSGameTrackingViewController.h"
 #import "USSGameCell.h"
 #import "USSTeam.h"
 #import "USSGame.h"
@@ -189,7 +190,11 @@ static NSDateFormatter *generateGameDate = nil;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    USSGame *game = [self.team.games objectAtIndex:indexPath.row];
+    USSGameTrackingViewController *gameTrackViewController = [[USSGameTrackingViewController alloc] initWithNibName:@"USSGameTrackingViewController" bundle:[NSBundle mainBundle]];
+    [gameTrackViewController setHidesBottomBarWhenPushed:YES];
+    [gameTrackViewController configureWithGame:game];
+    [self.navigationController pushViewController:gameTrackViewController animated:YES];
 }
 
 

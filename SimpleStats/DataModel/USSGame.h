@@ -7,6 +7,7 @@
 //
 
 #import "FCModel.h"
+#import "USSTeam.h"
 
 @interface USSGame : FCModel
 
@@ -14,5 +15,7 @@
 @property (nonatomic, retain) NSDate *date;
 @property (nonatomic, assign) int64_t teamID;
 @property (nonatomic, retain) NSString *opponent;
+
+@property (nonatomic, weak, readonly) USSTeam *team;
 
 @end
