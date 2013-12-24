@@ -11,6 +11,7 @@
 #import "USSRosterCell.h"
 
 #import "USSGame.h"
+#import "USSTeam.h"
 
 #define ToolbarAndNavBarHeight 64
 

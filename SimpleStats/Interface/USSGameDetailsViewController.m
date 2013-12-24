@@ -78,8 +78,7 @@ enum kDateSectionRows {
 }
 
 - (void) configureWithNewGameForTeam:(USSTeam *)team{
-    self.game = [USSGame new];
-    self.game.teamID = team.id;
+    self.game = [USSGame newWithTeamID:team.id];
     self.newGame = YES;
     
 }

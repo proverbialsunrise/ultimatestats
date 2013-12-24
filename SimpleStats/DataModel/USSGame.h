@@ -7,7 +7,10 @@
 //
 
 #import "FCModel.h"
-#import "USSTeam.h"
+
+@class USSTeam;
+@class USSPoint;
+@class USSPossession;
 
 @interface USSGame : FCModel
 
@@ -16,6 +19,17 @@
 @property (nonatomic, assign) int64_t teamID;
 @property (nonatomic, retain) NSString *opponent;
 
-@property (nonatomic, weak, readonly) USSTeam *team;
+@property (nonatomic, readonly) USSTeam *team;
+@property (nonatomic, readonly) USSPoint *currentPoint;
+@property (nonatomic, readonly) USSPossession *currentPosssession;
+
+
++ (USSGame *) newWithTeamID:(int64_t)teamID;
+
+- (void) scorePoint;
+
+- (void) revertPoint;
+
+
 
 @end

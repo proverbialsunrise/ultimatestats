@@ -129,7 +129,7 @@
                    @"     startTime  INTEGER,"
                    @"     endTime    INTEGER,"
                    @"     onOffense  INTEGER,"
-                   @"     scored     INTEGER,"
+                   @"     outcome     INTEGER,"
                    @"     FOREIGN KEY(gameID) REFERENCES USSGame(id)"
                    @");"
                    ]) failedAt(5);

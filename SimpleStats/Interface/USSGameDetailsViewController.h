@@ -15,7 +15,6 @@
 
 - (void) configureWithNewGameForTeam:(USSTeam *)team;
 
-
 - (void) configureWithGame:(USSGame *)game;
 
 @end
