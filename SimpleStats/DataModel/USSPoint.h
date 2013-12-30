@@ -16,6 +16,7 @@ typedef enum pointOutcome {
 } pointOutcome;
 
 @class USSPossession;
+@class USSPlayer;
 
 @interface USSPoint : FCModel
 
@@ -29,6 +30,8 @@ typedef enum pointOutcome {
 
 @property (nonatomic, readonly) USSPossession *currentPossession;
 
+@property (nonatomic, readonly) NSArray *players;
+
 + (USSPoint *) newWithGameID:(int64_t)gameID;
 
 
@@ -37,5 +40,9 @@ typedef enum pointOutcome {
 - (void) revertTurnover;
 
 - (void) endPointWithOutcome:(pointOutcome)outcome;
+
+- (void) addPlayer:(USSPlayer *)player;
+
+- (void) removePlayer:(USSPlayer *)player;
 
 @end

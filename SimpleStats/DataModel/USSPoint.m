@@ -8,10 +8,14 @@
 
 #import "USSPoint.h"
 #import "USSPossession.h"
+#import "USSPlayer.h"
+#import "USSPlayerPointLink.h"
 
 @interface USSPoint ()
 
 @property (nonatomic, retain) NSMutableArray *possessionStack;
+
+@property (nonatomic, retain) NSMutableArray *mutablePlayers;
 
 @end
 
@@ -29,6 +33,9 @@
         USSPossession *possession = [USSPossession newWithPointID:newPoint.id];
         [possession save];
         [newPoint.possessionStack addObject:possession];
+        
+        //Create the mutablePlayers array.
+        newPoint.mutablePlayers = [NSMutableArray array];
     }
     return newPoint;
 }
@@ -38,6 +45,19 @@
         _possessionStack = [NSMutableArray arrayWithArray:[USSPossession instancesWhere:@"pointID = ? ORDER BY startTime ASC", @(self.id)]];
     }
     return _possessionStack;
+}
+
+- (NSMutableArray *) mutablePlayers {
+    if (!_mutablePlayers) {
+        _mutablePlayers = [NSMutableArray array];
+        //get the list of playerIDs for this point from the DB.
+        //Load the players into the players array.
+        NSArray *playerPointLinks = [USSPlayerPointLink instancesWhere:@"pointID = ?", @(self.id)];
+        for (USSPlayerPointLink *playerPointLink in playerPointLinks) {
+            [_mutablePlayers addObject:playerPointLink.player];
+        }
+    }
+    return _mutablePlayers;
 }
 
 - (USSPossession *) currentPossession {
@@ -72,6 +92,25 @@
     [self save];
 }
 
+- (void) addPlayer:(USSPlayer *)player {
+    //Create a new PlayerPointLink object and save it to database.
+    USSPlayerPointLink *playerPointLink = [USSPlayerPointLink newWithPlayerID:player.id PointID:self.id];
+    [playerPointLink save];
+    //Add the player to the players array.
+    [self.mutablePlayers addObject:player];
+}
+
+- (void) removePlayer:(USSPlayer *)player {
+    if ([self.mutablePlayers containsObject:player]) {
+        [self.mutablePlayers removeObject:player];
+        USSPlayerPointLink *playerPointLink =[USSPlayerPointLink firstInstanceWhere:@"playerID = ? AND pointID = ?", @(player.id), @(self.id)];
+        [playerPointLink delete];
+    } else {
+        NSLog(@"Player is not part of the point...doing nothing here");
+        //TODO I should add some error returns to these methods...but for now...
+    }
+    
+}
 
 
 @end

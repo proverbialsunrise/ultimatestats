@@ -136,7 +136,8 @@
             
             
             if (! [db executeUpdate:
-                   @"CREATE TABLE USSPlayerPoint ("
+                   @"CREATE TABLE USSPlayerPointLink ("
+                   @"    id            INTEGER PRIMARY KEY AUTOINCREMENT,"
                    @"    playerID      INTEGER NOT NULL,"
                    @"    pointID       INTEGER NOT NULL,"
                    @"    FOREIGN KEY(playerID) REFERENCES USSPlayer(id) ON DELETE CASCADE,"

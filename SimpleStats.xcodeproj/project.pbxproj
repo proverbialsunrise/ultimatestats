@@ -37,6 +37,7 @@
 		37D93F7D1841B30B0020AE83 /* USSRosterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F7C1841B30B0020AE83 /* USSRosterCell.m */; };
 		37D93F85185258EE0020AE83 /* USSPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F84185258EE0020AE83 /* USSPlayerViewController.m */; };
 		37D93F8818525FCF0020AE83 /* USSEditableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D93F8718525FCF0020AE83 /* USSEditableTableViewCell.m */; };
+		37E9BDD21872155200BD372A /* USSPlayerPointLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E9BDD11872155200BD372A /* USSPlayerPointLink.m */; };
 		CC329FCF95B34C5DBD513937 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE75DFBD82B44E5ABB5EE977 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,8 @@
 		37D93F84185258EE0020AE83 /* USSPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSPlayerViewController.m; path = Interface/USSPlayerViewController.m; sourceTree = "<group>"; };
 		37D93F8618525FCF0020AE83 /* USSEditableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSEditableTableViewCell.h; path = Interface/USSEditableTableViewCell.h; sourceTree = "<group>"; };
 		37D93F8718525FCF0020AE83 /* USSEditableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSEditableTableViewCell.m; path = Interface/USSEditableTableViewCell.m; sourceTree = "<group>"; };
+		37E9BDD01872155200BD372A /* USSPlayerPointLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSPlayerPointLink.h; path = DataModel/USSPlayerPointLink.h; sourceTree = "<group>"; };
+		37E9BDD11872155200BD372A /* USSPlayerPointLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSPlayerPointLink.m; path = DataModel/USSPlayerPointLink.m; sourceTree = "<group>"; };
 		E4FD0FAEC6714F0BB8F97877 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		EE75DFBD82B44E5ABB5EE977 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -247,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				37D93F6C18412D760020AE83 /* USSPlayer.h */,
+				37E9BDD01872155200BD372A /* USSPlayerPointLink.h */,
+				37E9BDD11872155200BD372A /* USSPlayerPointLink.m */,
 				37D93F6D18412D760020AE83 /* USSPlayer.m */,
 				37D93F6318412CDE0020AE83 /* USSTeam.h */,
 				37D93F6418412CDE0020AE83 /* USSTeam.m */,
@@ -415,6 +420,7 @@
 				37D93F6B18412D570020AE83 /* USSGame.m in Sources */,
 				37D93F4018412C100020AE83 /* main.m in Sources */,
 				37D93F74184169BA0020AE83 /* USSPossession.m in Sources */,
+				37E9BDD21872155200BD372A /* USSPlayerPointLink.m in Sources */,
 				37D93F85185258EE0020AE83 /* USSPlayerViewController.m in Sources */,
 				37D93F77184180270020AE83 /* USSRosterViewController.m in Sources */,
 				37D93F7D1841B30B0020AE83 /* USSRosterCell.m in Sources */,
