@@ -21,6 +21,8 @@
 
 @property (nonatomic, strong) USSGame *game;
 
+- (void) updateUI;
+
 @end
 
 @implementation USSGameTrackingViewController
@@ -56,11 +58,10 @@
     [self.opponentTeamScoreView.teamLabel setText:self.game.opponent];
     
     
-    [self.passCountLabel setText:@"27"];
-    
+   
     [[self tableView] registerNib:[UINib nibWithNibName:@"RosterTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"RosterCell"];
     
-    
+    [self updateUI];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,29 +74,44 @@
     self.game = game;
 }
 
+- (void) updateUI {
+    [self.homeTeamScoreView.scoreLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)self.game.teamScore]];
+    [self.opponentTeamScoreView.scoreLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)self.game.opponentScore]];
+    
+    [self.passCountLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)self.game.passCount]];
+}
+
 
 
 - (IBAction) passButtonPushed:(id)sender {
     NSLog(@"PassButton");
     [self.game increasePassCount];
     [self.undoManager registerUndoWithTarget:self.game selector:@selector(decreasePassCount) object:nil];
+    [self updateUI];
+
 }
 
 - (IBAction) turnoverButtonPushed:(id)sender {
     NSLog(@"TurnoverButton");
     [self.game turnoverDisc];
     [self.undoManager registerUndoWithTarget:self.game selector:@selector(revertTurnover) object:nil];
+    [self updateUI];
+
 }
 
 - (IBAction) scoreButtonPushed:(id)sender {
     NSLog(@"ScoreButton");
     [self.game scorePoint];
     [self.undoManager registerUndoWithTarget:self.game selector:@selector(revertPoint) object:nil];
+    [self updateUI];
+
 }
 
 - (IBAction) undoButtonPoshed:(id)sender {
     NSLog(@"UndoButton");
     [self.undoManager undo];
+    [self updateUI];
+
 }
 
 
@@ -124,8 +140,8 @@
     
     NSUInteger row = indexPath.row;
     // Configure the cell...
-    [cell.numberLabel setText:[NSString stringWithFormat:@"%u",row]];
-    [cell.nameLabel setText:[NSString stringWithFormat:@"Player %u", row]];
+    [cell.numberLabel setText:[NSString stringWithFormat:@"%lu",(unsigned long)row]];
+    [cell.nameLabel setText:[NSString stringWithFormat:@"Player %lu", (unsigned long)row]];
     
     [cell setAccessoryType:UITableViewCellAccessoryNone];
     

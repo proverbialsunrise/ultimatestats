@@ -35,7 +35,7 @@
 
 - (NSMutableArray *) possessionStack {
     if (!_possessionStack) {
-        _possessionStack = [NSMutableArray arrayWithArray:[USSPossession instancesWhere:@"pointID = ? ORDER BY startTime ASC", self.id]];
+        _possessionStack = [NSMutableArray arrayWithArray:[USSPossession instancesWhere:@"pointID = ? ORDER BY startTime ASC", @(self.id)]];
     }
     return _possessionStack;
 }

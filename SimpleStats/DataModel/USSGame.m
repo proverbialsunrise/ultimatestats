@@ -38,7 +38,7 @@
 
 - (NSMutableArray *) pointStack {
     if (!_pointStack) {
-        _pointStack = [NSMutableArray arrayWithArray:[USSPoint instancesWhere:@"pointID = ? ORDER BY startTime ASC", self.id]];
+        _pointStack = [NSMutableArray arrayWithArray:[USSPoint instancesWhere:@"gameID = ? ORDER BY startTime ASC", @(self.id)]];
     }
     return _pointStack;
 }
@@ -60,13 +60,12 @@
 }
 
 - (NSUInteger) opponentScore {
-    NSNumber *count = [USSGame firstValueFromQuery:@"COUNT(*) from USSPoint WHERE gameID = ? AND  outcome = ?", self.id, OPPONENTSCORE];
+    NSNumber *count = [USSGame firstValueFromQuery:@"SELECT COUNT(*) from USSPoint WHERE gameID = ? AND  outcome = ?", @(self.id), @(OPPONENTSCORE)];
     return [count unsignedIntegerValue];
 }
 
 - (NSUInteger) teamScore {
-    #pragma TODO Does this work?
-    NSNumber *count = [USSGame firstValueFromQuery:@"COUNT(*) from USSPoint WHERE gameID = ? AND  outcome = ?", self.id, TEAMSCORE];
+    NSNumber *count = [USSGame firstValueFromQuery:@"SELECT COUNT(*) from USSPoint WHERE gameID = ? AND  outcome = ?", @(self.id), @(TEAMSCORE)];
     return [count unsignedIntegerValue];
 }
 
