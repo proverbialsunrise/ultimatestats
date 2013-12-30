@@ -12,6 +12,8 @@
 
 #import "USSGame.h"
 #import "USSTeam.h"
+#import "USSPoint.h"
+#import "USSPossession.h"
 
 #define ToolbarAndNavBarHeight 64
 
@@ -72,20 +74,28 @@
 }
 
 
+
 - (IBAction) passButtonPushed:(id)sender {
     NSLog(@"PassButton");
+    [self.game increasePassCount];
+    [self.undoManager registerUndoWithTarget:self.game selector:@selector(decreasePassCount) object:nil];
 }
 
 - (IBAction) turnoverButtonPushed:(id)sender {
     NSLog(@"TurnoverButton");
+    [self.game turnoverDisc];
+    [self.undoManager registerUndoWithTarget:self.game selector:@selector(revertTurnover) object:nil];
 }
 
 - (IBAction) scoreButtonPushed:(id)sender {
     NSLog(@"ScoreButton");
+    [self.game scorePoint];
+    [self.undoManager registerUndoWithTarget:self.game selector:@selector(revertPoint) object:nil];
 }
 
 - (IBAction) undoButtonPoshed:(id)sender {
     NSLog(@"UndoButton");
+    [self.undoManager undo];
 }
 
 

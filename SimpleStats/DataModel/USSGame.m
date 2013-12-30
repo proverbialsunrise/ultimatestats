@@ -10,6 +10,7 @@
 #import "USSTeam.h"
 #import "USSPossession.h"
 #import "USSPoint.h"
+#import <FMDatabaseAdditions.h>
 
 @interface USSGame ()
 
@@ -47,15 +48,50 @@
     return (USSPoint *)[self.pointStack lastObject];
 }
 
-- (USSPossession *) currentPosssession {
+- (USSPossession *) currentPossession {
     return self.currentPoint.currentPossession;
+}
+
+
+
+
+- (NSUInteger) passCount {
+    return self.currentPossession.passCount;
+}
+
+- (NSUInteger) opponentScore {
+    NSNumber *count = [USSGame firstValueFromQuery:@"COUNT(*) from USSPoint WHERE gameID = ? AND  outcome = ?", self.id, OPPONENTSCORE];
+    return [count unsignedIntegerValue];
+}
+
+- (NSUInteger) teamScore {
+    #pragma TODO Does this work?
+    NSNumber *count = [USSGame firstValueFromQuery:@"COUNT(*) from USSPoint WHERE gameID = ? AND  outcome = ?", self.id, TEAMSCORE];
+    return [count unsignedIntegerValue];
+}
+
+
+- (void) turnoverDisc {
+    [self.currentPoint turnoverDisc];
+}
+
+- (void) revertTurnover {
+    [self.currentPoint revertTurnover];
+}
+
+- (void) increasePassCount {
+    [self.currentPossession increasePassCount];
+}
+
+- (void) decreasePassCount {
+    [self.currentPossession decreasePassCount];
 }
 
 
 - (void) scorePoint {
     //determine if *team scored or the opponent scored.
     pointOutcome outcome;
-    if (self.currentPosssession.onOffense) {
+    if (self.currentPossession.onOffense) {
         outcome = TEAMSCORE;
     } else {
         outcome = OPPONENTSCORE;
@@ -75,7 +111,7 @@
     [pointToDelete delete];
     
     self.currentPoint.outcome = NOOUTCOME;
-    self.currentPosssession.outcome = UNFINISHED;
+    self.currentPossession.outcome = UNFINISHED;
 }
 
 

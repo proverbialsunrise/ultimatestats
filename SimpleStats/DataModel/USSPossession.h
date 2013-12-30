@@ -19,7 +19,7 @@ typedef enum possessionOutcome {
 
 @property (nonatomic, assign) int64_t id;
 @property (nonatomic, assign) int64_t pointID;
-@property (nonatomic, assign) int64_t passCount;
+@property (nonatomic, assign) NSUInteger passCount;
 @property (nonatomic, assign) BOOL onOffense;
 @property (nonatomic, assign) NSDate *startTime;
 @property (nonatomic, assign) NSDate *endTime;

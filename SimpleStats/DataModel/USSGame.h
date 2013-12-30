@@ -21,7 +21,12 @@
 
 @property (nonatomic, readonly) USSTeam *team;
 @property (nonatomic, readonly) USSPoint *currentPoint;
-@property (nonatomic, readonly) USSPossession *currentPosssession;
+@property (nonatomic, readonly) USSPossession *currentPossession;
+
+
+@property (nonatomic, assign, readonly) NSUInteger teamScore;
+@property (nonatomic, assign, readonly) NSUInteger opponentScore;
+@property (nonatomic, assign, readonly) NSUInteger passCount;
 
 
 + (USSGame *) newWithTeamID:(int64_t)teamID;
@@ -29,6 +34,14 @@
 - (void) scorePoint;
 
 - (void) revertPoint;
+
+- (void) turnoverDisc;
+
+- (void) revertTurnover;
+
+- (void) increasePassCount;
+
+- (void) decreasePassCount;
 
 
 

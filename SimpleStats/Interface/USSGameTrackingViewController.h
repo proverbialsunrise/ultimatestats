@@ -39,5 +39,6 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
+@property (nonatomic, strong) NSUndoManager *undoManager;
 
 @end
