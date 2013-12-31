@@ -19,12 +19,14 @@
 
 - (void) configureWithGame:(USSGame *)game;
 
-/*
-@property (nonatomic, strong) UIButton *passButton;
-@property (nonatomic, strong) UIButton *turnoverButton;
-@property (nonatomic, strong) UIButton *scoreButton;
-@property (nonatomic, strong) UIButton *undoButton;
-*/
+
+@property (nonatomic, strong) IBOutlet UIButton *passButton;
+@property (nonatomic, strong) IBOutlet UIButton *turnoverButton;
+@property (nonatomic, strong) IBOutlet UIButton *scoreButton;
+@property (nonatomic, strong) IBOutlet UIButton *undoButton;
+@property (nonatomic, strong) IBOutlet UIButton *substituteButton;
+
+
 
 - (IBAction) passButtonPushed:(id)sender;
 - (IBAction) turnoverButtonPushed:(id)sender;

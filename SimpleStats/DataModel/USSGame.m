@@ -97,18 +97,26 @@
 
 - (void) scorePoint {
     //determine if *team scored or the opponent scored.
-    pointOutcome outcome;
+    pointOutcome lastOutcome;
     if (self.currentPossession.onOffense) {
-        outcome = TEAMSCORE;
+        lastOutcome = TEAMSCORE;
     } else {
-        outcome = OPPONENTSCORE;
+        lastOutcome = OPPONENTSCORE;
     }
     //end the current point.  Also ends the current possession.
-    [self.currentPoint endPointWithOutcome:outcome];
+    [self.currentPoint endPointWithOutcome:lastOutcome];
     //Setup the next point.
     USSPoint *newPoint = [USSPoint newWithGameID:self.id];
-    [newPoint save];
     [self.pointStack addObject:newPoint];
+    
+    //Set the team that is now on offense
+    if (lastOutcome == TEAMSCORE) {
+        self.currentPoint.onOffense = NO;
+        self.currentPossession.onOffense = NO;
+    } else {
+        self.currentPoint.onOffense = YES;
+        self.currentPossession.onOffense = YES;
+    }
 }
 
 - (void) revertPoint {

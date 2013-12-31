@@ -17,6 +17,9 @@
 
 #define ToolbarAndNavBarHeight 64
 
+#define hasDiscColour [UIColor colorWithRed:197.0/255.0 green:237.0/255.0 blue:198.0/255.0 alpha:1.0];
+#define noDiscColour [UIColor whiteColor];
+
 @interface USSGameTrackingViewController ()
 
 @property (nonatomic, strong) USSGame *game;
@@ -43,7 +46,7 @@
     USSTeamScoreView *hScoreView = [USSTeamScoreView teamScoreView];
     CGSize hSViewSize = hScoreView.frame.size;
     #pragma mark TODO fix the frame sizing here...Should be 80, but 20 is better
-    [hScoreView setFrame:CGRectMake(0, ToolbarAndNavBarHeight, hSViewSize.width, 16)];
+    [hScoreView setFrame:CGRectMake(0, ToolbarAndNavBarHeight, hSViewSize.width, 80)];
     self.homeTeamScoreView = hScoreView;
     [self.view addSubview:self.homeTeamScoreView];
     [self.homeTeamScoreView.scoreLabel setText:@"25"];
@@ -51,7 +54,7 @@
     
     USSTeamScoreView *oScoreView = [USSTeamScoreView teamScoreView];
     CGSize oSViewSize = oScoreView.frame.size;
-    [oScoreView setFrame:CGRectMake(hSViewSize.width, ToolbarAndNavBarHeight, oSViewSize.width, 16)];
+    [oScoreView setFrame:CGRectMake(hSViewSize.width, ToolbarAndNavBarHeight, oSViewSize.width, 80)];
     self.opponentTeamScoreView = oScoreView;
     [self.view addSubview:self.opponentTeamScoreView];
     [self.opponentTeamScoreView.scoreLabel setText:@"5"];
@@ -79,6 +82,19 @@
     [self.opponentTeamScoreView.scoreLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)self.game.opponentScore]];
     
     [self.passCountLabel setText:[NSString stringWithFormat:@"%lu", (unsigned long)self.game.passCount]];
+    if (self.game.currentPossession.onOffense) {
+        self.homeTeamScoreView.backgroundColor = hasDiscColour;
+        self.opponentTeamScoreView.backgroundColor = noDiscColour;
+    } else {
+        self.homeTeamScoreView.backgroundColor = noDiscColour;
+        self.opponentTeamScoreView.backgroundColor = hasDiscColour;
+    }
+    
+    if (self.undoManager.canUndo) {
+        [self.undoButton setEnabled:YES];
+    } else {
+        [self.undoButton setEnabled:NO];
+    }
 }
 
 

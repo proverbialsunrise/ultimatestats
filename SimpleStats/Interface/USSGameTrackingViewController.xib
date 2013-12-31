@@ -6,8 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="USSGameTrackingViewController">
             <connections>
+                <outlet property="passButton" destination="i8K-OD-Jsr" id="KGZ-7Z-Ixk"/>
                 <outlet property="passCountLabel" destination="MRK-Fz-yna" id="8RC-S3-haQ"/>
+                <outlet property="scoreButton" destination="Sq0-zO-I0g" id="1As-AD-prf"/>
                 <outlet property="tableView" destination="E06-pc-wQ7" id="9qR-EE-uby"/>
+                <outlet property="turnoverButton" destination="5lX-ni-sVZ" id="Erc-2n-8Wh"/>
+                <outlet property="undoButton" destination="sso-nG-vTt" id="6ph-ch-wFk"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -91,7 +95,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="E06-pc-wQ7">
-                    <rect key="frame" x="0.0" y="144" width="320" height="156"/>
+                    <rect key="frame" x="0.0" y="80" width="320" height="220"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -106,7 +110,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="jCP-ZL-JR1" firstAttribute="top" secondItem="E06-pc-wQ7" secondAttribute="bottom" constant="-1" id="B5o-BM-QTc"/>
-                <constraint firstItem="E06-pc-wQ7" firstAttribute="top" secondItem="1" secondAttribute="top" constant="144" id="NWf-qI-l0o"/>
+                <constraint firstItem="E06-pc-wQ7" firstAttribute="top" secondItem="1" secondAttribute="top" constant="80" id="NWf-qI-l0o"/>
                 <constraint firstAttribute="bottom" secondItem="jCP-ZL-JR1" secondAttribute="bottom" id="PGR-b1-a6H"/>
                 <constraint firstItem="jCP-ZL-JR1" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="biV-Lt-iK9"/>
                 <constraint firstAttribute="centerX" secondItem="E06-pc-wQ7" secondAttribute="centerX" id="luV-WL-9sW"/>

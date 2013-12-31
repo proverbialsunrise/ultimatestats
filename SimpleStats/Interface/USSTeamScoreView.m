@@ -33,6 +33,10 @@
     return self;
 }
 
+- (CGSize) intrinsicContentSize {
+    return CGSizeMake(160, 80);
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
