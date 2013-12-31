@@ -42,27 +42,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[self tableView] registerNib:[UINib nibWithNibName:@"RosterTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"RosterCell"];
+
+    
     // Do any additional setup after loading the view from its nib.
-    USSTeamScoreView *hScoreView = [USSTeamScoreView teamScoreView];
-    CGSize hSViewSize = hScoreView.frame.size;
-    #pragma mark TODO fix the frame sizing here...Should be 80, but 20 is better
-    [hScoreView setFrame:CGRectMake(0, ToolbarAndNavBarHeight, hSViewSize.width, 80)];
-    self.homeTeamScoreView = hScoreView;
+    //USSTeamScoreView *hScoreView = [USSTeamScoreView teamScoreView];
+    //CGSize hSViewSize = hScoreView.frame.size;
+    //#pragma mark TODO fix the frame sizing here...Should be 80, but 20 is better
+    //[hScoreView setFrame:CGRectMake(0, ToolbarAndNavBarHeight, hSViewSize.width, 80)];
+    //self.homeTeamScoreView = hScoreView;
     [self.view addSubview:self.homeTeamScoreView];
-    [self.homeTeamScoreView.scoreLabel setText:@"25"];
     [self.homeTeamScoreView.teamLabel setText:self.game.team.name];
     
-    USSTeamScoreView *oScoreView = [USSTeamScoreView teamScoreView];
-    CGSize oSViewSize = oScoreView.frame.size;
-    [oScoreView setFrame:CGRectMake(hSViewSize.width, ToolbarAndNavBarHeight, oSViewSize.width, 80)];
-    self.opponentTeamScoreView = oScoreView;
+    //USSTeamScoreView *oScoreView = [USSTeamScoreView teamScoreView];
+    //CGSize oSViewSize = oScoreView.frame.size;
+    //[oScoreView setFrame:CGRectMake(hSViewSize.width, ToolbarAndNavBarHeight, oSViewSize.width, 80)];
+    //self.opponentTeamScoreView = oScoreView;
     [self.view addSubview:self.opponentTeamScoreView];
-    [self.opponentTeamScoreView.scoreLabel setText:@"5"];
     [self.opponentTeamScoreView.teamLabel setText:self.game.opponent];
     
     
    
-    [[self tableView] registerNib:[UINib nibWithNibName:@"RosterTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"RosterCell"];
     
     [self updateUI];
 }

@@ -14,8 +14,8 @@
 @interface USSGameTrackingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 
-@property (nonatomic, strong) USSTeamScoreView *homeTeamScoreView;
-@property (nonatomic, strong) USSTeamScoreView *opponentTeamScoreView;
+@property (nonatomic, strong) IBOutlet USSTeamScoreView *homeTeamScoreView;
+@property (nonatomic, strong) IBOutlet USSTeamScoreView *opponentTeamScoreView;
 
 - (void) configureWithGame:(USSGame *)game;
 

@@ -19,7 +19,7 @@
         return teamScoreView;
     }
 
-    NSAssert(0, @"Initialized teamScoreView but did not receive the corerct class from Nib. Fatal error.");
+    NSAssert(0, @"Initialized teamScoreView but did not receive the correct class from Nib. Fatal error.");
     return nil;
 }
 
@@ -33,9 +33,17 @@
     return self;
 }
 
-- (CGSize) intrinsicContentSize {
-    return CGSizeMake(160, 80);
+- (id) initWithCoder:(NSCoder *)aDecoder {
+        self = [super initWithCoder:aDecoder];
+        if(self)
+        {
+            [[NSBundle mainBundle] loadNibNamed:@"USSTeamScoreView" owner:self options:nil];
+            [self addSubview:self.topLevelSubView];
+        }
+        return self;
 }
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

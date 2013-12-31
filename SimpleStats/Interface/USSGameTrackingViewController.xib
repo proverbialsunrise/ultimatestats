@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="USSGameTrackingViewController">
             <connections>
+                <outlet property="buttonContainerView" destination="jCP-ZL-JR1" id="2Om-gW-ewu"/>
+                <outlet property="homeTeamScoreView" destination="hR4-fO-gX7" id="Hkk-T2-9vr"/>
+                <outlet property="opponentTeamScoreView" destination="wUM-ay-5HN" id="1hD-sr-CV1"/>
                 <outlet property="passButton" destination="i8K-OD-Jsr" id="KGZ-7Z-Ixk"/>
                 <outlet property="passCountLabel" destination="MRK-Fz-yna" id="8RC-S3-haQ"/>
                 <outlet property="scoreButton" destination="Sq0-zO-I0g" id="1As-AD-prf"/>
@@ -95,7 +98,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="E06-pc-wQ7">
-                    <rect key="frame" x="0.0" y="80" width="320" height="220"/>
+                    <rect key="frame" x="0.0" y="144" width="320" height="156"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -106,14 +109,36 @@
                         <outlet property="delegate" destination="-1" id="cRT-tz-b9D"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-fO-gX7" customClass="USSTeamScoreView">
+                    <rect key="frame" x="0.0" y="64" width="160" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="8hC-KN-Ake"/>
+                        <constraint firstAttribute="width" constant="160" id="BO7-VQ-LL0"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUM-ay-5HN" customClass="USSTeamScoreView">
+                    <rect key="frame" x="160" y="64" width="160" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="6MZ-mU-qAV"/>
+                        <constraint firstAttribute="width" constant="160" id="zvM-bU-aBE"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="jCP-ZL-JR1" firstAttribute="top" secondItem="E06-pc-wQ7" secondAttribute="bottom" constant="-1" id="B5o-BM-QTc"/>
-                <constraint firstItem="E06-pc-wQ7" firstAttribute="top" secondItem="1" secondAttribute="top" constant="80" id="NWf-qI-l0o"/>
+                <constraint firstItem="wUM-ay-5HN" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="C8t-Lr-T12"/>
+                <constraint firstItem="hR4-fO-gX7" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Cr7-Y6-fGn"/>
+                <constraint firstItem="jCP-ZL-JR1" firstAttribute="top" secondItem="E06-pc-wQ7" secondAttribute="bottom" constant="-1" id="Iq2-V7-wK8"/>
+                <constraint firstItem="wUM-ay-5HN" firstAttribute="leading" secondItem="hR4-fO-gX7" secondAttribute="trailing" id="P4N-6P-eGI"/>
                 <constraint firstAttribute="bottom" secondItem="jCP-ZL-JR1" secondAttribute="bottom" id="PGR-b1-a6H"/>
                 <constraint firstItem="jCP-ZL-JR1" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="biV-Lt-iK9"/>
                 <constraint firstAttribute="centerX" secondItem="E06-pc-wQ7" secondAttribute="centerX" id="luV-WL-9sW"/>
+                <constraint firstItem="E06-pc-wQ7" firstAttribute="top" secondItem="hR4-fO-gX7" secondAttribute="bottom" id="oFf-eJ-r2g"/>
+                <constraint firstItem="hR4-fO-gX7" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="psn-Rv-hBn"/>
                 <constraint firstAttribute="trailing" secondItem="jCP-ZL-JR1" secondAttribute="trailing" id="uhV-va-NFh"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
