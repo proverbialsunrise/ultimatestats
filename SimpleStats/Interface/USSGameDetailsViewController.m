@@ -198,7 +198,7 @@ enum kDateSectionRows {
             switch (indexPath.row) {
                 case kDateSectionDateRow:
                 {
-                    [cell.descriptionLabel setText:NSLocalizedString(@"Number", nil)];
+                    [cell.descriptionLabel setText:NSLocalizedString(@"Game Date", nil)];
                     [cell.editableTextView setText:[generateGameDate  stringFromDate:self.game.date]];
                     [cell.editableTextView setTag:(NSInteger)kDateSection];
                     self.dateTextField = cell.editableTextView;

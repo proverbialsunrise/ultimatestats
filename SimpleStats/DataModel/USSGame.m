@@ -25,7 +25,15 @@
 + (USSGame *) newWithTeamID:(int64_t)teamID {
     USSGame *newGame = [USSGame new];
     if (newGame) {
+        newGame.teamID = teamID;
         newGame.pointStack = [NSMutableArray array];
+        newGame.date = [NSDate date];
+        [newGame save];
+        
+        //Create the first point.
+
+        USSPoint *firstPoint = [USSPoint newWithGameID:newGame.id];
+        [newGame.pointStack addObject:firstPoint];
     }
     return newGame;
 }

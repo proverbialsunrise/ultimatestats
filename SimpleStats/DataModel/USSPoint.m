@@ -28,10 +28,12 @@
         newPoint.gameID = gameID;
         newPoint.outcome = NOOUTCOME;
         newPoint.startTime = [NSDate date];
+        [newPoint save];
+
+        //Now make associated objects.
         newPoint.possessionStack = [NSMutableArray array];
         //Add the first possession to the stack so that we are ready to start tracking.
         USSPossession *possession = [USSPossession newWithPointID:newPoint.id];
-        [possession save];
         [newPoint.possessionStack addObject:possession];
         
         //Create the mutablePlayers array.
@@ -69,7 +71,7 @@
     //End the current possession and set its outcome.
     [self.currentPossession endPossessionWithOutcome:TURNOVER];
     //Create a new possession.  Set it's offense/defense status. Push onto possession stack.
-    USSPossession *newPossession = [USSPossession new];
+    USSPossession *newPossession = [USSPossession newWithPointID:self.id];
     newPossession.onOffense = !(self.currentPossession.onOffense);
     [newPossession save];
     [self.possessionStack addObject:newPossession];

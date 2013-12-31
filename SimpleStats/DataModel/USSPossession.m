@@ -17,6 +17,7 @@
         newPossession.outcome = UNFINISHED;
         newPossession.startTime = [NSDate date];
         newPossession.passCount = 0;
+        [newPossession save];
     }
     return newPossession;
 }

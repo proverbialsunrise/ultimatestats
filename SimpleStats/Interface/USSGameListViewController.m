@@ -122,7 +122,6 @@ static NSDateFormatter *generateGameDate = nil;
     USSGameCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     USSGame *game = [self.team.games objectAtIndex:indexPath.row];
-    
     cell.teamLabel.text = [NSString stringWithFormat:@"%@ vs. %@", self.team.name, game.opponent];
     cell.dateLabel.text = [generateGameDate stringFromDate:game.date];
     

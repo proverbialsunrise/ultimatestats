@@ -106,7 +106,7 @@
                    @"    name    TEXT NOT NULL DEFAULT '',"
                    @"    number       TEXT NOT NULL DEFAULT '',"
                    @"    teamID       INTEGER NOT NULL,"
-                   @"    FOREIGN KEY(teamID) REFERENCES USSTeam(id)"
+                   @"    FOREIGN KEY(teamID) REFERENCES USSTeam(id) ON DELETE CASCADE"
                    @");"
                    ]) failedAt(2);
             
@@ -118,7 +118,7 @@
                    @"    date         INTEGER NOT NULL,"
                    @"    teamID       INTEGER NOT NULL,"
                    @"    opponent     TEXT NOT NULL DEFAULT '',"
-                   @"    FOREIGN KEY(teamID) REFERENCES USSTeam(id)"
+                   @"    FOREIGN KEY(teamID) REFERENCES USSTeam(id) ON DELETE CASCADE"
                    @");"
                    ]) failedAt(4);
             
@@ -130,7 +130,7 @@
                    @"     endTime    INTEGER,"
                    @"     onOffense  INTEGER,"
                    @"     outcome     INTEGER,"
-                   @"     FOREIGN KEY(gameID) REFERENCES USSGame(id)"
+                   @"     FOREIGN KEY(gameID) REFERENCES USSGame(id) ON DELETE CASCADE"
                    @");"
                    ]) failedAt(5);
             
@@ -145,9 +145,9 @@
                    @");"
                    ]) failedAt(6);
             
-            if (! [db executeUpdate:@"CREATE INDEX IF NOT EXISTS name ON USSPlayerPoint(playerID);"]) failedAt(7);
+            if (! [db executeUpdate:@"CREATE INDEX IF NOT EXISTS name ON USSPlayerPointLink(playerID);"]) failedAt(7);
             
-            if (! [db executeUpdate:@"CREATE INDEX IF NOT EXISTS name ON USSPlayerPoint(pointID);"]) failedAt(8);
+            if (! [db executeUpdate:@"CREATE INDEX IF NOT EXISTS name ON USSPlayerPointLink(pointID);"]) failedAt(8);
             
             if (! [db executeUpdate:
                    @"CREATE TABLE USSPossession ("
@@ -177,7 +177,7 @@
         [db commit];
     }];
     
-    //[self makeSampleData];
+    [self makeSampleData];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.

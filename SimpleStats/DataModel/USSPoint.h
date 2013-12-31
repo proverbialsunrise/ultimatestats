@@ -22,8 +22,8 @@ typedef enum pointOutcome {
 
 @property (nonatomic, assign) int64_t id;
 @property (nonatomic, assign) int64_t gameID;
-@property (nonatomic) NSDate *startTime;
-@property (nonatomic) NSDate *endTime;
+@property (nonatomic, retain) NSDate *startTime;
+@property (nonatomic, retain) NSDate *endTime;
 @property (nonatomic, assign) BOOL onOffense;
 @property (nonatomic, assign) pointOutcome outcome;
 
