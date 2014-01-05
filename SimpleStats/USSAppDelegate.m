@@ -188,17 +188,17 @@
     USSRosterViewController *rosterViewController = [[USSRosterViewController alloc] init];
     USSTeam * team = [USSTeam instanceWithPrimaryKey:@(1)];
     [rosterViewController configureWithTeam:team];
-    
     UINavigationController *rosterController = [[UINavigationController alloc] initWithRootViewController:rosterViewController];
-    //TODO MAKE PROPER TAB BAR ITEMS
-    #pragma TODO
-    rosterController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:1];
+    rosterController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Roster", nil) image:[UIImage imageNamed:@"rosterTabBar"] tag:1];
+    
     
     
     USSGameListViewController *gameViewController = [[USSGameListViewController alloc] init];
     [gameViewController configureWithTeam:team];
     UINavigationController *gameController = [[UINavigationController alloc] initWithRootViewController:gameViewController];
     
+    
+    gameController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Games", nil) image:[UIImage imageNamed:@"gamesTabBar"] tag:1];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
