@@ -17,5 +17,9 @@ DerivedData
 *.hmap
 *.xccheckout
 
+# ImageWorkspace
+ImagesInProgress
+
+
 #CocoaPods
 Pods
