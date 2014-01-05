@@ -43,6 +43,12 @@ typedef enum pointOutcome {
 
 - (void) addPlayer:(USSPlayer *)player;
 
+- (void) addPlayers:(NSArray *)players;
+
 - (void) removePlayer:(USSPlayer *)player;
+
+- (void) removePlayers:(NSArray *)players;
+
+- (void) removeAllPlayers;
 
 @end

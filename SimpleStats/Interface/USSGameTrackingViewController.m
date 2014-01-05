@@ -9,11 +9,13 @@
 #import "USSGameTrackingViewController.h"
 #import "USSTeamScoreView.h"
 #import "USSRosterCell.h"
+#import "USSLineupViewController.h"
 
 #import "USSGame.h"
 #import "USSTeam.h"
 #import "USSPoint.h"
 #import "USSPossession.h"
+#import "USSPlayer.h"
 
 #define ToolbarAndNavBarHeight 64
 
@@ -24,7 +26,9 @@
 
 @property (nonatomic, strong) USSGame *game;
 
+
 - (void) updateUI;
+
 
 @end
 
@@ -134,6 +138,17 @@
 
 - (IBAction) substituteButtonPushed:(id)sender{
     NSLog(@"subButton");
+    USSLineupViewController *lineupViewController = [[USSLineupViewController alloc] initWithStyle:UITableViewStylePlain];
+    [lineupViewController configureWithTeam:self.game.team andPoint:self.game.currentPoint];
+    lineupViewController.delegate = self;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:lineupViewController];
+    [self.navigationController presentViewController:navController animated:YES completion:nil];
+}
+
+- (void) loadLineupFromLineupViewController:(USSLineupViewController *)lineupController {
+    [self.game.currentPoint removeAllPlayers];
+    [self.game.currentPoint addPlayers:lineupController.playersInLineup];
+    [self.tableView reloadData];
 }
 
 
@@ -147,18 +162,17 @@
 # pragma mark UITableViewDataSource
 
 - (NSInteger) tableView:(UITableView *) tableView numberOfRowsInSection:(NSInteger)section {
-    #pragma TODO make this return the right number according to the current lineup
-    return 7;
+    return [self.game.currentPoint.players count];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"RosterCell";
     USSRosterCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSUInteger row = indexPath.row;
     // Configure the cell...
-    [cell.numberLabel setText:[NSString stringWithFormat:@"%lu",(unsigned long)row]];
-    [cell.nameLabel setText:[NSString stringWithFormat:@"Player %lu", (unsigned long)row]];
+    USSPlayer *player = [self.game.currentPoint.players objectAtIndex:indexPath.row];
+    [cell.numberLabel setText:player.number];
+    [cell.nameLabel setText:player.name];
     
     [cell setAccessoryType:UITableViewCellAccessoryNone];
     

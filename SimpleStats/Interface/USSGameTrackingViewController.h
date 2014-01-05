@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "USSLineupViewControllerDelegate.h"
 
 @class USSTeamScoreView;
 @class USSGame;
+@class USSLineupViewController;
 
-@interface USSGameTrackingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface USSGameTrackingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, USSLineupViewControllerDelegate >
 
 
 @property (nonatomic, strong) IBOutlet USSTeamScoreView *homeTeamScoreView;
@@ -42,5 +44,6 @@
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSUndoManager *undoManager;
+
 
 @end

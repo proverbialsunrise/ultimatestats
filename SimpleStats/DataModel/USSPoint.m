@@ -102,6 +102,12 @@
     [self.mutablePlayers addObject:player];
 }
 
+- (void) addPlayers:(NSArray *)players {
+    for (USSPlayer * p in players) {
+        [self addPlayer:p];
+    }
+}
+
 - (void) removePlayer:(USSPlayer *)player {
     if ([self.mutablePlayers containsObject:player]) {
         [self.mutablePlayers removeObject:player];
@@ -111,7 +117,21 @@
         NSLog(@"Player is not part of the point...doing nothing here");
         //TODO I should add some error returns to these methods...but for now...
     }
-    
+}
+
+- (void) removePlayers:(NSArray *)players {
+    for (USSPlayer* p in players) {
+        [self removePlayer:p];
+    }
+}
+
+- (void) removeAllPlayers{
+    [self.mutablePlayers removeAllObjects];
+    [USSPlayerPointLink executeUpdateQuery:@"DELETE FROM $T WHERE pointID = ?", @(self.id)];
+}
+
+- (NSArray *)players {
+    return self.mutablePlayers;
 }
 
 

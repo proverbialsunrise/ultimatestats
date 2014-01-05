@@ -11,6 +11,7 @@
 		370143A218636BFF008FBD8A /* USSGameTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 370143A018636BFF008FBD8A /* USSGameTrackingViewController.m */; };
 		370143A318636BFF008FBD8A /* USSGameTrackingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370143A118636BFF008FBD8A /* USSGameTrackingViewController.xib */; };
 		370143A518636C34008FBD8A /* USSTeamScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370143A418636C34008FBD8A /* USSTeamScoreView.xib */; };
+		37CAB19E18774B900091F08C /* USSLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB19D18774B900091F08C /* USSLineupViewController.m */; };
 		37CF7600185B752800E69ADB /* USSGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF75FF185B752800E69ADB /* USSGameListViewController.m */; };
 		37CF7603185B8F6200E69ADB /* USSGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF7602185B8F6200E69ADB /* USSGameCell.m */; };
 		37CF7605185B905800E69ADB /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CF7604185B905800E69ADB /* GameTableViewCell.xib */; };
@@ -58,6 +59,9 @@
 		370143A018636BFF008FBD8A /* USSGameTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGameTrackingViewController.m; path = Interface/USSGameTrackingViewController.m; sourceTree = "<group>"; };
 		370143A118636BFF008FBD8A /* USSGameTrackingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = USSGameTrackingViewController.xib; path = Interface/USSGameTrackingViewController.xib; sourceTree = "<group>"; };
 		370143A418636C34008FBD8A /* USSTeamScoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = USSTeamScoreView.xib; path = Interface/USSTeamScoreView.xib; sourceTree = "<group>"; };
+		37CAB19C18774B900091F08C /* USSLineupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSLineupViewController.h; path = Interface/USSLineupViewController.h; sourceTree = "<group>"; };
+		37CAB19D18774B900091F08C /* USSLineupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSLineupViewController.m; path = Interface/USSLineupViewController.m; sourceTree = "<group>"; };
+		37CAB19F187768E10091F08C /* USSLineupViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USSLineupViewControllerDelegate.h; path = Interface/USSLineupViewControllerDelegate.h; sourceTree = "<group>"; };
 		37CF75FE185B752800E69ADB /* USSGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameListViewController.h; path = Interface/USSGameListViewController.h; sourceTree = "<group>"; };
 		37CF75FF185B752800E69ADB /* USSGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGameListViewController.m; path = Interface/USSGameListViewController.m; sourceTree = "<group>"; };
 		37CF7601185B8F6200E69ADB /* USSGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameCell.h; path = Interface/USSGameCell.h; sourceTree = "<group>"; };
@@ -140,6 +144,9 @@
 				3701439F18636BFF008FBD8A /* USSGameTrackingViewController.h */,
 				370143A018636BFF008FBD8A /* USSGameTrackingViewController.m */,
 				370143A118636BFF008FBD8A /* USSGameTrackingViewController.xib */,
+				37CAB19C18774B900091F08C /* USSLineupViewController.h */,
+				37CAB19D18774B900091F08C /* USSLineupViewController.m */,
+				37CAB19F187768E10091F08C /* USSLineupViewControllerDelegate.h */,
 			);
 			name = Tracking;
 			sourceTree = "<group>";
@@ -419,6 +426,7 @@
 				37D93F8818525FCF0020AE83 /* USSEditableTableViewCell.m in Sources */,
 				37D93F6B18412D570020AE83 /* USSGame.m in Sources */,
 				37D93F4018412C100020AE83 /* main.m in Sources */,
+				37CAB19E18774B900091F08C /* USSLineupViewController.m in Sources */,
 				37D93F74184169BA0020AE83 /* USSPossession.m in Sources */,
 				37E9BDD21872155200BD372A /* USSPlayerPointLink.m in Sources */,
 				37D93F85185258EE0020AE83 /* USSPlayerViewController.m in Sources */,
