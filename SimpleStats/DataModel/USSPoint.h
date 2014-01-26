@@ -32,6 +32,8 @@ typedef enum pointOutcome {
 
 @property (nonatomic, readonly) NSArray *players;
 
+@property (nonatomic, readonly) NSInteger possessionCount;
+
 + (USSPoint *) newWithGameID:(int64_t)gameID;
 
 

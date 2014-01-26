@@ -296,10 +296,7 @@ enum kDateSectionRows {
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
-    self.game.opponent = self.opponentTextField.text;
-    self.game.date =  [generateGameDate dateFromString:self.dateTextField.text];
-    [self.game save];
-    [textField resignFirstResponder];
+    [self endTextEditing:textField];
     
     return YES;
 }

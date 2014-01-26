@@ -8,6 +8,8 @@
             <connections>
                 <outlet property="buttonContainerView" destination="jCP-ZL-JR1" id="2Om-gW-ewu"/>
                 <outlet property="homeTeamScoreView" destination="hR4-fO-gX7" id="Hkk-T2-9vr"/>
+                <outlet property="instructionLabel" destination="1AI-JX-QPO" id="skP-jh-WRi"/>
+                <outlet property="instructionView" destination="LAd-vk-mEl" id="P6t-tx-gh5"/>
                 <outlet property="opponentTeamScoreView" destination="wUM-ay-5HN" id="1hD-sr-CV1"/>
                 <outlet property="passButton" destination="i8K-OD-Jsr" id="KGZ-7Z-Ixk"/>
                 <outlet property="passCountLabel" destination="MRK-Fz-yna" id="8RC-S3-haQ"/>
@@ -48,7 +50,7 @@
                             <rect key="frame" x="230" y="0.0" width="90" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                            <state key="normal" title="Substitute">
+                            <state key="normal" title="Lineup">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -109,6 +111,27 @@
                         <outlet property="delegate" destination="-1" id="cRT-tz-b9D"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAd-vk-mEl">
+                    <rect key="frame" x="0.0" y="144" width="320" height="156"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Tap the receiving team    2. Set the lineup" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="1AI-JX-QPO">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="1AI-JX-QPO" firstAttribute="top" secondItem="LAd-vk-mEl" secondAttribute="top" id="EIi-Tj-Tgr"/>
+                        <constraint firstItem="1AI-JX-QPO" firstAttribute="leading" secondItem="LAd-vk-mEl" secondAttribute="leading" id="K3O-hc-DWO"/>
+                        <constraint firstAttribute="height" secondItem="1AI-JX-QPO" secondAttribute="height" id="aij-uI-dfK"/>
+                        <constraint firstAttribute="width" secondItem="1AI-JX-QPO" secondAttribute="width" id="bJa-u6-P2i"/>
+                    </constraints>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-fO-gX7" customClass="USSTeamScoreView">
                     <rect key="frame" x="0.0" y="64" width="160" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,6 +155,7 @@
             <constraints>
                 <constraint firstItem="wUM-ay-5HN" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="C8t-Lr-T12"/>
                 <constraint firstItem="hR4-fO-gX7" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="Cr7-Y6-fGn"/>
+                <constraint firstItem="LAd-vk-mEl" firstAttribute="leading" secondItem="E06-pc-wQ7" secondAttribute="leading" id="EGL-cB-7NE"/>
                 <constraint firstItem="jCP-ZL-JR1" firstAttribute="top" secondItem="E06-pc-wQ7" secondAttribute="bottom" constant="-1" id="Iq2-V7-wK8"/>
                 <constraint firstItem="wUM-ay-5HN" firstAttribute="leading" secondItem="hR4-fO-gX7" secondAttribute="trailing" id="P4N-6P-eGI"/>
                 <constraint firstAttribute="bottom" secondItem="jCP-ZL-JR1" secondAttribute="bottom" id="PGR-b1-a6H"/>
@@ -139,7 +163,11 @@
                 <constraint firstAttribute="centerX" secondItem="E06-pc-wQ7" secondAttribute="centerX" id="luV-WL-9sW"/>
                 <constraint firstItem="E06-pc-wQ7" firstAttribute="top" secondItem="hR4-fO-gX7" secondAttribute="bottom" id="oFf-eJ-r2g"/>
                 <constraint firstItem="hR4-fO-gX7" firstAttribute="top" secondItem="1" secondAttribute="top" constant="64" id="psn-Rv-hBn"/>
+                <constraint firstItem="LAd-vk-mEl" firstAttribute="width" secondItem="E06-pc-wQ7" secondAttribute="width" id="qgG-p9-0tP"/>
+                <constraint firstItem="LAd-vk-mEl" firstAttribute="height" secondItem="E06-pc-wQ7" secondAttribute="height" id="so7-85-wGJ"/>
                 <constraint firstAttribute="trailing" secondItem="jCP-ZL-JR1" secondAttribute="trailing" id="uhV-va-NFh"/>
+                <constraint firstItem="LAd-vk-mEl" firstAttribute="top" secondItem="E06-pc-wQ7" secondAttribute="top" id="yPB-tg-ipX"/>
+                <constraint firstItem="LAd-vk-mEl" firstAttribute="leading" secondItem="E06-pc-wQ7" secondAttribute="leading" id="z92-Kp-cIm"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

@@ -14,6 +14,18 @@
 		37CAB19E18774B900091F08C /* USSLineupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB19D18774B900091F08C /* USSLineupViewController.m */; };
 		37CAB1A11878E7BB0091F08C /* rosterTabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1A01878E7BB0091F08C /* rosterTabBar@2x.png */; };
 		37CAB1A51878EFE40091F08C /* gamesTabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1A41878EFE40091F08C /* gamesTabBar@2x.png */; };
+		37CAB1AF187916860091F08C /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1A7187916860091F08C /* Icon-72.png */; };
+		37CAB1B0187916860091F08C /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1A8187916860091F08C /* Icon-72@2x.png */; };
+		37CAB1B1187916860091F08C /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1A9187916860091F08C /* Icon-Small-50.png */; };
+		37CAB1B2187916860091F08C /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1AA187916860091F08C /* Icon-Small-50@2x.png */; };
+		37CAB1B3187916860091F08C /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1AB187916860091F08C /* Icon-Small.png */; };
+		37CAB1B4187916860091F08C /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1AC187916860091F08C /* Icon-Small@2x.png */; };
+		37CAB1B5187916860091F08C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1AD187916860091F08C /* Icon.png */; };
+		37CAB1B6187916860091F08C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1AE187916860091F08C /* Icon@2x.png */; };
+		37CAB1BA187CEC1A0091F08C /* USSCreateTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CAB1B8187CEC1A0091F08C /* USSCreateTeamViewController.m */; };
+		37CAB1BB187CEC1A0091F08C /* USSCreateTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1B9187CEC1A0091F08C /* USSCreateTeamViewController.xib */; };
+		37CAB1BE187CF4E40091F08C /* titleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1BC187CF4E40091F08C /* titleScreen.png */; };
+		37CAB1BF187CF4E40091F08C /* titleScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37CAB1BD187CF4E40091F08C /* titleScreen@2x.png */; };
 		37CF7600185B752800E69ADB /* USSGameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF75FF185B752800E69ADB /* USSGameListViewController.m */; };
 		37CF7603185B8F6200E69ADB /* USSGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CF7602185B8F6200E69ADB /* USSGameCell.m */; };
 		37CF7605185B905800E69ADB /* GameTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CF7604185B905800E69ADB /* GameTableViewCell.xib */; };
@@ -66,6 +78,20 @@
 		37CAB19F187768E10091F08C /* USSLineupViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USSLineupViewControllerDelegate.h; path = Interface/USSLineupViewControllerDelegate.h; sourceTree = "<group>"; };
 		37CAB1A01878E7BB0091F08C /* rosterTabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rosterTabBar@2x.png"; path = "Interface/Images/rosterTabBar@2x.png"; sourceTree = "<group>"; };
 		37CAB1A41878EFE40091F08C /* gamesTabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gamesTabBar@2x.png"; path = "Interface/Images/gamesTabBar@2x.png"; sourceTree = "<group>"; };
+		37CAB1A7187916860091F08C /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Icons/Icon-72.png"; sourceTree = "<group>"; };
+		37CAB1A8187916860091F08C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Icons/Icon-72@2x.png"; sourceTree = "<group>"; };
+		37CAB1A9187916860091F08C /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Icons/Icon-Small-50.png"; sourceTree = "<group>"; };
+		37CAB1AA187916860091F08C /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "Icons/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		37CAB1AB187916860091F08C /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Icons/Icon-Small.png"; sourceTree = "<group>"; };
+		37CAB1AC187916860091F08C /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Icons/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		37CAB1AD187916860091F08C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Icons/Icon.png; sourceTree = "<group>"; };
+		37CAB1AE187916860091F08C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Icons/Icon@2x.png"; sourceTree = "<group>"; };
+		37CAB1B7187CEC1A0091F08C /* USSCreateTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSCreateTeamViewController.h; path = Interface/USSCreateTeamViewController.h; sourceTree = "<group>"; };
+		37CAB1B8187CEC1A0091F08C /* USSCreateTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSCreateTeamViewController.m; path = Interface/USSCreateTeamViewController.m; sourceTree = "<group>"; };
+		37CAB1B9187CEC1A0091F08C /* USSCreateTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = USSCreateTeamViewController.xib; path = Interface/USSCreateTeamViewController.xib; sourceTree = "<group>"; };
+		37CAB1BC187CF4E40091F08C /* titleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = titleScreen.png; path = Interface/Images/titleScreen.png; sourceTree = "<group>"; };
+		37CAB1BD187CF4E40091F08C /* titleScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titleScreen@2x.png"; path = "Interface/Images/titleScreen@2x.png"; sourceTree = "<group>"; };
+		37CAB1C3187D06F90091F08C /* USSCreateTeamViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSCreateTeamViewDelegate.h; path = Interface/USSCreateTeamViewDelegate.h; sourceTree = "<group>"; };
 		37CF75FE185B752800E69ADB /* USSGameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameListViewController.h; path = Interface/USSGameListViewController.h; sourceTree = "<group>"; };
 		37CF75FF185B752800E69ADB /* USSGameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USSGameListViewController.m; path = Interface/USSGameListViewController.m; sourceTree = "<group>"; };
 		37CF7601185B8F6200E69ADB /* USSGameCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USSGameCell.h; path = Interface/USSGameCell.h; sourceTree = "<group>"; };
@@ -155,9 +181,26 @@
 			name = Tracking;
 			sourceTree = "<group>";
 		};
+		37CAB1A61879167A0091F08C /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				37CAB1A7187916860091F08C /* Icon-72.png */,
+				37CAB1A8187916860091F08C /* Icon-72@2x.png */,
+				37CAB1A9187916860091F08C /* Icon-Small-50.png */,
+				37CAB1AA187916860091F08C /* Icon-Small-50@2x.png */,
+				37CAB1AB187916860091F08C /* Icon-Small.png */,
+				37CAB1AC187916860091F08C /* Icon-Small@2x.png */,
+				37CAB1AD187916860091F08C /* Icon.png */,
+				37CAB1AE187916860091F08C /* Icon@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		37CF75FC185B74D900E69ADB /* Roster */ = {
 			isa = PBXGroup;
 			children = (
+				37CAB1BC187CF4E40091F08C /* titleScreen.png */,
+				37CAB1BD187CF4E40091F08C /* titleScreen@2x.png */,
 				37CAB1A01878E7BB0091F08C /* rosterTabBar@2x.png */,
 				37D93F75184180270020AE83 /* USSRosterViewController.h */,
 				37D93F76184180270020AE83 /* USSRosterViewController.m */,
@@ -166,6 +209,10 @@
 				37D93F7C1841B30B0020AE83 /* USSRosterCell.m */,
 				37D93F83185258EE0020AE83 /* USSPlayerViewController.h */,
 				37D93F84185258EE0020AE83 /* USSPlayerViewController.m */,
+				37CAB1C3187D06F90091F08C /* USSCreateTeamViewDelegate.h */,
+				37CAB1B7187CEC1A0091F08C /* USSCreateTeamViewController.h */,
+				37CAB1B8187CEC1A0091F08C /* USSCreateTeamViewController.m */,
+				37CAB1B9187CEC1A0091F08C /* USSCreateTeamViewController.xib */,
 			);
 			name = Roster;
 			sourceTree = "<group>";
@@ -225,6 +272,7 @@
 				37D93F4218412C100020AE83 /* USSAppDelegate.h */,
 				37D93F4318412C100020AE83 /* USSAppDelegate.m */,
 				37D93F4518412C100020AE83 /* Images.xcassets */,
+				37CAB1A61879167A0091F08C /* Icons */,
 				37D93F3A18412C100020AE83 /* Supporting Files */,
 			);
 			path = SimpleStats;
@@ -368,14 +416,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CAB1BB187CEC1A0091F08C /* USSCreateTeamViewController.xib in Resources */,
 				37CAB1A51878EFE40091F08C /* gamesTabBar@2x.png in Resources */,
+				37CAB1B6187916860091F08C /* Icon@2x.png in Resources */,
 				37D93F3E18412C100020AE83 /* InfoPlist.strings in Resources */,
+				37CAB1B1187916860091F08C /* Icon-Small-50.png in Resources */,
+				37CAB1B3187916860091F08C /* Icon-Small.png in Resources */,
+				37CAB1BF187CF4E40091F08C /* titleScreen@2x.png in Resources */,
+				37CAB1B0187916860091F08C /* Icon-72@2x.png in Resources */,
+				37CAB1AF187916860091F08C /* Icon-72.png in Resources */,
 				37D93F7A1841A7D10020AE83 /* RosterTableViewCell.xib in Resources */,
+				37CAB1B2187916860091F08C /* Icon-Small-50@2x.png in Resources */,
 				370143A518636C34008FBD8A /* USSTeamScoreView.xib in Resources */,
 				37D93F4618412C100020AE83 /* Images.xcassets in Resources */,
 				370143A318636BFF008FBD8A /* USSGameTrackingViewController.xib in Resources */,
 				37CF7605185B905800E69ADB /* GameTableViewCell.xib in Resources */,
+				37CAB1B5187916860091F08C /* Icon.png in Resources */,
 				37CAB1A11878E7BB0091F08C /* rosterTabBar@2x.png in Resources */,
+				37CAB1BE187CF4E40091F08C /* titleScreen.png in Resources */,
+				37CAB1B4187916860091F08C /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CAB1BA187CEC1A0091F08C /* USSCreateTeamViewController.m in Sources */,
 				37D93F7118412DA20020AE83 /* USSPoint.m in Sources */,
 				370143A218636BFF008FBD8A /* USSGameTrackingViewController.m in Sources */,
 				37D93F4418412C100020AE83 /* USSAppDelegate.m in Sources */,

@@ -13,6 +13,7 @@
 
 #import "USSRosterCell.h"
 #import "USSPlayerViewController.h"
+#import "USSCreateTeamViewController.h"
 #import "USSAppDelegate.h"
 
 @interface USSRosterViewController ()
@@ -45,13 +46,28 @@
         //Register for updates when the Players change.
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(reloadPlayers:) name:FCModelInsertNotification object:USSPlayer.class];
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(reloadPlayers:) name:FCModelUpdateNotification object:USSPlayer.class];
-        
-        
-        
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlayer)];
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(toggleEditing)];
+
     }
     return self;
+}
+
+
+- (void) viewDidLoad {
+
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlayer)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(toggleEditing)];
+}
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    if (nil == self.team) {
+        //Present the team creation modal view.
+        USSCreateTeamViewController *createTeamViewController = [[USSCreateTeamViewController alloc] init];
+        createTeamViewController.delegate = self;
+        [self.navigationController presentViewController:createTeamViewController animated:YES completion:nil];
+    }
 }
 
 - (void) reloadPlayers:(NSNotification *)notification  {
@@ -78,16 +94,6 @@
     }
 }
 
-- (void) viewDidLoad
-{
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
 
 - (void)didReceiveMemoryWarning
 {

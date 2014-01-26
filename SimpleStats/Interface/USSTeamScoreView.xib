@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="USSTeamScoreView">
             <connections>
+                <outlet property="button" destination="b02-AV-u53" id="8z1-Rg-abx"/>
                 <outlet property="scoreLabel" destination="XzO-O6-r51" id="FDH-nW-38a"/>
                 <outlet property="teamLabel" destination="CfO-Vc-90d" id="83G-Mj-jUO"/>
                 <outlet property="topLevelSubView" destination="hQU-Cf-A3D" id="A8B-V8-ZoZ"/>
@@ -42,6 +43,13 @@
                             <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="50"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b02-AV-u53">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>

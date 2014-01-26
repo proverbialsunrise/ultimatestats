@@ -177,7 +177,7 @@
         [db commit];
     }];
     
-    [self makeSampleData];
+    //[self makeSampleData];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -186,8 +186,11 @@
     
     
     USSRosterViewController *rosterViewController = [[USSRosterViewController alloc] init];
-    USSTeam * team = [USSTeam instanceWithPrimaryKey:@(1)];
-    [rosterViewController configureWithTeam:team];
+
+    USSTeam * team = [USSTeam instanceWithPrimaryKey:@(1)createIfNonexistent:NO];
+    if (team) {
+        [rosterViewController configureWithTeam:team];
+    }
     UINavigationController *rosterController = [[UINavigationController alloc] initWithRootViewController:rosterViewController];
     rosterController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Roster", nil) image:[UIImage imageNamed:@"rosterTabBar"] tag:1];
     

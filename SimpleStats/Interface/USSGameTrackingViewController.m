@@ -29,6 +29,9 @@
 
 - (void) updateUI;
 
+- (void) homeTeamScoreViewTapped;
+- (void) opponentTeamScoreViewTapped;
+
 
 @end
 
@@ -50,23 +53,16 @@
     [[self tableView] registerNib:[UINib nibWithNibName:@"RosterTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"RosterCell"];
 
     
-    // Do any additional setup after loading the view from its nib.
-    //USSTeamScoreView *hScoreView = [USSTeamScoreView teamScoreView];
-    //CGSize hSViewSize = hScoreView.frame.size;
-    //#pragma mark TODO fix the frame sizing here...Should be 80, but 20 is better
-    //[hScoreView setFrame:CGRectMake(0, ToolbarAndNavBarHeight, hSViewSize.width, 80)];
-    //self.homeTeamScoreView = hScoreView;
+
     [self.view addSubview:self.homeTeamScoreView];
     [self.homeTeamScoreView.teamLabel setText:self.game.team.name];
-    
-    //USSTeamScoreView *oScoreView = [USSTeamScoreView teamScoreView];
-    //CGSize oSViewSize = oScoreView.frame.size;
-    //[oScoreView setFrame:CGRectMake(hSViewSize.width, ToolbarAndNavBarHeight, oSViewSize.width, 80)];
-    //self.opponentTeamScoreView = oScoreView;
+    [self.homeTeamScoreView.button addTarget:self action:@selector(homeTeamScoreViewTapped) forControlEvents:UIControlEventTouchUpInside];
+
     [self.view addSubview:self.opponentTeamScoreView];
     [self.opponentTeamScoreView.teamLabel setText:self.game.opponent];
+    [self.opponentTeamScoreView.button addTarget:self action:@selector(opponentTeamScoreViewTapped) forControlEvents:UIControlEventTouchUpInside];
     
-    
+    [self.instructionView  setAlpha:0.0];
    
     
     [self updateUI];
@@ -100,8 +96,36 @@
     } else {
         [self.undoButton setEnabled:NO];
     }
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.2];
+    if ([self.game.currentPoint.players count] < 1) {
+        //If there are no players...Display the pre-pull message.
+        [self.instructionView setAlpha:1.0];
+        [self.instructionLabel setAlpha:1.0];
+    } else {
+        //else hide the pre-pull message.
+        [self.instructionView setAlpha:0.0];
+        [self.instructionLabel setAlpha:0.0];
+    }
+    [UIView commitAnimations];
 }
 
+
+- (void) homeTeamScoreViewTapped {
+    [self.game.currentPossession setOnOffense:YES];
+    if (self.game.currentPoint.possessionCount == 1){
+        [self.game.currentPoint setOnOffense:YES];
+    }
+    [self updateUI];
+}
+
+- (void) opponentTeamScoreViewTapped {
+    [self.game.currentPossession setOnOffense:NO];
+    if (self.game.currentPoint.possessionCount == 1){
+        [self.game.currentPoint setOnOffense:NO];
+    }
+    [self updateUI];
+}
 
 
 - (IBAction) passButtonPushed:(id)sender {
@@ -125,6 +149,7 @@
     [self.game scorePoint];
     [self.undoManager registerUndoWithTarget:self.game selector:@selector(revertPoint) object:nil];
     [self updateUI];
+    [self.tableView reloadData];
 
 }
 
@@ -132,6 +157,7 @@
     NSLog(@"UndoButton");
     [self.undoManager undo];
     [self updateUI];
+    [self.tableView reloadData];
 
 }
 
@@ -149,6 +175,7 @@
     [self.game.currentPoint removeAllPlayers];
     [self.game.currentPoint addPlayers:lineupController.playersInLineup];
     [self.tableView reloadData];
+    [self updateUI];
 }
 
 
@@ -164,6 +191,7 @@
 - (NSInteger) tableView:(UITableView *) tableView numberOfRowsInSection:(NSInteger)section {
     return [self.game.currentPoint.players count];
 }
+
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"RosterCell";

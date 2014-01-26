@@ -14,6 +14,7 @@
 @property (nonatomic, strong) IBOutlet UIView *topLevelSubView;
 @property (nonatomic, strong) IBOutlet UILabel *teamLabel;
 @property (nonatomic, strong) IBOutlet UILabel *scoreLabel;
+@property (nonatomic, strong) IBOutlet UIButton *button;
 
 +(id) teamScoreView;
 

@@ -43,7 +43,12 @@
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
+@property (nonatomic, strong) IBOutlet UIView *instructionView;
+
+@property (nonatomic, strong) IBOutlet UILabel *instructionLabel;
+
 @property (nonatomic, strong) NSUndoManager *undoManager;
+
 
 
 @end

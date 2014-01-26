@@ -66,6 +66,10 @@
     return (USSPossession * )[self.possessionStack lastObject];
 }
 
+- (NSInteger) possessionCount {
+    return [self.possessionStack count];
+}
+
 
 - (void) turnoverDisc {
     //End the current possession and set its outcome.

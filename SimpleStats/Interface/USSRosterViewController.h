@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "USSCreateTeamViewDelegate.h"
 @class USSTeam;
 
-@interface USSRosterViewController : UITableViewController
-- (void) configureWithTeam:(USSTeam *) team;
+@interface USSRosterViewController : UITableViewController <USSCreateTeamViewDelegate>
+
 
 @end

@@ -282,10 +282,7 @@ enum numberSectionRows {
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 
-    self.player.name = self.nameTextField.text;
-    self.player.number = self.numberTextField.text;
-    [self.player save];
-    [textField resignFirstResponder];
+    [self endTextEditing:textField];
 
     return YES;
 
